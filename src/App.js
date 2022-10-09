@@ -1,0 +1,94 @@
+import React, { useState } from "react";
+import "./App.css";
+
+z
+
+const employees = [
+  {
+    name: "Jack",
+    id: Math.random(),
+  },
+  {
+    name: "Jon",
+    id: Math.random(),
+  },
+  {
+    name: "Mack",
+    id: Math.random(),
+  },
+  {
+    name: "Max",
+    id: Math.random(),
+  },
+  {
+    name: "Tom",
+    id: Math.random(),
+  },
+  {
+    name: "Fiona",
+    id: Math.random(),
+  },
+  {
+    name: "Jerry",
+    id: Math.random(),
+  },
+  {
+    name: "Colt",
+    id: Math.random(),
+  },
+];
+
+const App = () => {
+  return (
+    <div>
+      {employees.map((employees) => (
+        <h4>Name:{`${employees.name} Id:${employees.id}`}</h4>
+      ))}
+    </div>
+  );
+
+  // const [courseGoals, setCourseGoals] = useState([
+  //   { text: "Do all exercises!", id: "g1" },
+  //   { text: "Finish the course!", id: "g2" },
+  // ]);
+  // const addGoalHandler = (enteredText) => {
+  //   setCourseGoals((prevGoals) => {
+  //     const updatedGoals = [...prevGoals];
+  //     updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
+  //     return updatedGoals;
+  //   });
+  // };
+  // const deleteItemHandler = (goalId) => {
+  //   setCourseGoals((prevGoals) => {
+  //     const updatedGoals = prevGoals.filter((goal) => goal.id !== goalId);
+  //     return updatedGoals;
+  //   });
+  // };
+  // let content = (
+  //   <p style={{ textAlign: "center" }}>No goals found. Maybe add one?</p>
+  // );
+  // if (courseGoals.length > 0) {
+  //   content = (
+  //     <CourseGoalList items={courseGoals} onDeleteItem={deleteItemHandler} />
+  //   );
+  // }
+  // return (
+  //   <div>
+  //     <section id="goal-form">
+  //       <CourseInput onAddGoal={addGoalHandler} />
+  //     </section>
+  //     <section id="goals">
+  //       {content}
+  //       {/* {courseGoals.length > 0 && (
+  //         <CourseGoalList
+  //           items={courseGoals}
+  //           onDeleteItem={deleteItemHandler}
+  //         />
+  //       ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
+  //       } */}
+  //     </section>
+  //   </div>
+  // );
+};
+
+export default App;
